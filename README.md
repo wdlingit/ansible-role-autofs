@@ -1,8 +1,7 @@
 Ansible Role: autofs
 =========
-[![Build Status](https://travis-ci.org/cmprescott/ansible-role-autofs.svg?branch=master)](https://travis-ci.org/cmprescott/ansible-role-autofs)
 
-Installs and configures autofs.
+Installs and configures autofs. Very minor modification based on cmprescott.autofs. "state" was added to items of autofs_indirect_maps so that an item with _absent_ state means removal of the record in auto.master. This should facilitate modifications of autofs configuration and not just "additive-only" configuration.
 
 Requirements
 ------------
@@ -64,8 +63,7 @@ Example Playbook
   roles:
     - name: "Media Client | NFS | ensure automounts"
       become: true
-      become_method: sudo
-      role: cmprescott.autofs
+      role: wdlingit.autofs
       autofs_indirect_maps:
 
         - name: "auto.nfs-nas"
@@ -101,3 +99,5 @@ Author Information
 ------------------
 
 Prescott Chris
+(minor modification by wdlingit)
+
