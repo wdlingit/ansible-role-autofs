@@ -1,7 +1,7 @@
 Ansible Role: autofs
 =========
 
-Installs and configures autofs. Very minor modification based on cmprescott.autofs. "state" was added to items of autofs_indirect_maps so that an item with _absent_ state means removal of the record in auto.master. This should facilitate modifications of autofs configuration and not just "additive-only" configuration.
+Installs and configures autofs. Very minor modification based on cmprescott.autofs. `state` was added to items of `autofs_indirect_maps` so that an item with _absent_ state means removal of the record in `auto.master`. This should facilitate modifications of autofs configuration and not just _additive-only_ configuration.
 
 Requirements
 ------------
