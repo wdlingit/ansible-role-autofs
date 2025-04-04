@@ -52,7 +52,7 @@
     marker: "# {mark} MANAGED BY ANSIBLE : {{ item.mark | default (item.path + item.name) }}"
     block: |
       {{ item.path }}    {{ item.name }} {{ item.options | default ("") }}
-    state: "{{ item.state }}"
+    state: "{{ item.state | default (\"present\") }}"
   with_items: "{{ autofs_indirect_maps }}"
   notify: [ 'restart autofs', 'reload autofs']
   when: ansible_distribution != 'Archlinux'
@@ -63,7 +63,7 @@
     marker: "# {mark} MANAGED BY ANSIBLE : {{ item.mark | default (item.path + item.name) }}"
     block: |
       {{ item.path }}    {{ item.name }} {{ item.options | default ("") }}
-    state: "{{ item.state }}"
+    state: "{{ item.state | default (\"present\") }}"
   with_items: "{{ autofs_indirect_maps }}"
   notify: [ 'restart autofs', 'reload autofs']
   when: ansible_distribution == 'Archlinux'
