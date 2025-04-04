@@ -18,6 +18,7 @@ autofs_indirect_maps: []
 #    path: /mnt/nfs
 #    mark: "unique identifier for idempotency"
 #    options: "--timeout=30 --ghost"
+#    state: present
 #    mounts:
 #      - name: "isos"
 #        fstype: "nfs,rw,bg,hard,intr,tcp,resvport"
