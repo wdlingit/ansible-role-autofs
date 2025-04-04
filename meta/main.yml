@@ -2,7 +2,6 @@ galaxy_info:
   role_name: autofs
   author: Prescott Chris
   description: Installs and configures autofs.
-  issue_tracker_url: https://github.com/cmprescott/ansible-role-autofs/issues
   license: BSD
   min_ansible_version: 1.9
   platforms:
