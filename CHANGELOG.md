@@ -1,6 +1,7 @@
 # Change Log
 
 ## [Unreleased][unreleased]
+- Added state to items of auto.master, which enables removal of records in auto.master.
 
 ## [0.2.3] - 2016-09-07
 ### Added
