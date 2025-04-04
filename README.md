@@ -72,6 +72,7 @@ Example Playbook
           path: "/mnt/nfs"
           mark: "nfs mounts from NAS"
           options: "--timeout=30 --ghost"
+          state: present
           mounts:
             - name: "movies"
               fstype: "nfs,rw,bg,hard,intr,tcp,resvport"
@@ -84,6 +85,7 @@ Example Playbook
           path: "/-"
           mark: "NFS mount with root base"
           options: "--timeout=30 --ghost"
+          state: present
           mounts:
             - name: "/var/remotedir"
               fstype: "nfs,rw,bg,hard,intr,tcp,resvport"
